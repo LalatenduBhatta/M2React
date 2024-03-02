@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        class Student {
+            constructor(name, address) {
+                this.name = name;
+                this.address = address;
+            }
+            getFullData() {
+                console.log(this.name + " is from " + this.address)
+            }
+        }
+        const std1 = new Student("Rohit", "Mumbai")
+        console.log(std1);
+        std1.getFullData()
+
+        class Course extends Student {
+            constructor(name, address, course) {
+                super(name, address)
+                this.course = course
+            }
+        }
+        const std2 = new Course("Virat", "Delhi", "MERN")
+        console.log(std2);
+        std2.getFullData()
+
+    </script>
+</body>
+
+</html>
