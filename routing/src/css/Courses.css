@@ -1,0 +1,23 @@
+.course-links{
+    background-color: blue;
+    height: 70vh;
+    width: 10vw;
+    color: white;
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 40px;
+    font-size: 25px;
+}
+.course-links li:hover{
+    cursor: pointer;
+    color: brown;
+    font-weight: bold;
+}
+.main{
+    display: flex;
+    width:100%;
+    background-color: orange;
+}
