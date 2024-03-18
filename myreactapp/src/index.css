@@ -53,3 +53,48 @@
     background-color: white;
     box-shadow: 0 0 5px rgb(4, 181, 4);
 }
+.container{
+    display: grid;
+    min-height:calc(100vh - 160px);
+    padding: 20px;
+    grid-template-columns: repeat(4,1fr);
+    gap: 30px;
+    background-color: rgb(91, 104, 91);
+    color: white;
+    align-content: start;
+}
+.card{
+    background-color: rgb(249, 99, 45);
+    height: 100px;
+    display: flex;
+    justify-content:space-between;
+}
+h3{
+    overflow-y: scroll;
+    flex-grow: 1;
+}
+.buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.buttons>button{
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    outline: none;
+    border: none;
+    box-shadow:0 0 10px inset black;
+    border-radius: 4px;
+    background-color: chartreuse;
+}
+.buttons>button:first-child{
+    background-color: red;
+}
+.buttons>button:hover{
+    transition: all 0.5s ease 0s;
+    transform: scale(1.2,1.2);
+    opacity: 0.7;
+}
