@@ -8,6 +8,7 @@ function TaskInput({ dispatch }) {
         }
         else {
             dispatch({ type: "add", payload: inputData.trim() })
+            setInputData("")
         }
     }
     return (

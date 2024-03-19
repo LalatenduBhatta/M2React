@@ -68,12 +68,17 @@
     height: 100px;
     display: flex;
     justify-content:space-between;
+    box-shadow: 0 0 10px black;
+    border-radius: 5px;
+    padding: 5px;
 }
 h3{
     overflow-y: scroll;
     flex-grow: 1;
 }
 .buttons{
+    padding: 5px;
+    gap: 5px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;

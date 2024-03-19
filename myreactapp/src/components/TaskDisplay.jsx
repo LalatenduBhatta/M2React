@@ -7,12 +7,14 @@ function TaskDisplay({ tasks, dispatch }) {
         <>
             <div className="container">
                 {
-                    tasks.map(e => {
+                    tasks.map((e, i) => {
                         return (
                             <div className="card">
                                 <h3>{e}</h3>
                                 <div className='buttons'>
-                                    <button>DEL</button>
+                                    <button
+                                        onClick={() => dispatch({ type: "delete", payload: i })}
+                                    >DEL</button>
                                     <button>EDIT</button>
                                 </div>
                             </div>
