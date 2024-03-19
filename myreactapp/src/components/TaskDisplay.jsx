@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import EditModal from './EditModal'
 
 
 function TaskDisplay({ tasks, dispatch }) {
+    const [isModal, setISModal] = useState(false)
 
+    const editHandeler = () => {
+        setISModal(true)
+    }
     return (
         <>
             <div className="container">
@@ -16,7 +20,7 @@ function TaskDisplay({ tasks, dispatch }) {
                                     <button
                                         onClick={() => dispatch({ type: "delete", payload: i })}
                                     >DEL</button>
-                                    <button>EDIT</button>
+                                    <button onClick={editHandeler}>EDIT</button>
                                 </div>
                             </div>
                         )
@@ -24,7 +28,7 @@ function TaskDisplay({ tasks, dispatch }) {
                 }
             </div>
             <div>
-                <EditModal></EditModal>
+                {isModal && <EditModal></EditModal>}
             </div>
         </>
     )

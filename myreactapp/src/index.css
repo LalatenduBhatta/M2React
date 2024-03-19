@@ -110,7 +110,7 @@ h3{
     position: absolute;
     top: 0;
     left: 0;
-    background-color:rgba(46, 67, 67, 0.6);
+    background-color:rgba(47, 73, 114, 0.6);
 }
 .modal{
     position: absolute;
@@ -158,6 +158,6 @@ h3{
     color: black;
     cursor: pointer;
 }
-.cross:hover{
-    transform: perspective(200px) translateZ(40px);
+.cross:hover,.modal-buttons>button:hover{
+    transform: perspective(200px) translateZ(30px);
 }
