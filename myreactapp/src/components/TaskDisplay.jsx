@@ -1,4 +1,5 @@
 import React from 'react'
+import EditModal from './EditModal'
 
 
 function TaskDisplay({ tasks, dispatch }) {
@@ -21,6 +22,9 @@ function TaskDisplay({ tasks, dispatch }) {
                         )
                     })
                 }
+            </div>
+            <div>
+                <EditModal></EditModal>
             </div>
         </>
     )
