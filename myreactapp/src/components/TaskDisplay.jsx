@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import EditModal from './EditModal'
+import { RiDeleteBin5Fill } from "react-icons/ri";
+import { FaEdit } from "react-icons/fa";
 
 
 function TaskDisplay({ tasks, dispatch }) {
@@ -24,8 +26,12 @@ function TaskDisplay({ tasks, dispatch }) {
                                 <div className='buttons'>
                                     <button
                                         onClick={() => dispatch({ type: "delete", payload: index })}
-                                    >DEL</button>
-                                    <button onClick={() => editHandeler(task, index)}>EDIT</button>
+                                    >
+                                        <RiDeleteBin5Fill />
+                                    </button>
+                                    <button onClick={() => editHandeler(task, index)}>
+                                        <FaEdit />
+                                    </button>
                                 </div>
                             </div>
                         )

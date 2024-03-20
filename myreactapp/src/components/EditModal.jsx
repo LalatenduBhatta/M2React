@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
+import { RxCross2 } from "react-icons/rx";
 
 function EditModal({ closeModal, editTask, dispatch }) {
     // console.log(editTask);
@@ -26,7 +27,9 @@ function EditModal({ closeModal, editTask, dispatch }) {
                         <button
                             onClick={closeModal}>Close</button>
                     </div>
-                    <h2 className="cross" onClick={closeModal}>X</h2>
+                    <h2 className="cross" onClick={closeModal}>
+                        <RxCross2 />
+                    </h2>
                 </div>
             </div >
         </>

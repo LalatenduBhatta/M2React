@@ -161,3 +161,30 @@ h3{
 .cross:hover,.modal-buttons>button:hover{
     transform: perspective(200px) translateZ(30px);
 }
+@media (max-width:1200px){
+    .container{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+@media (max-width:900px){
+    .container{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media (max-width:500px){
+    .container{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .input>button{
+        padding: 0;
+    }
+    .input>input{
+        height: 50px;
+        flex-grow: 1;
+        font-size: 16px;
+    }
+}
