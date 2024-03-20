@@ -4,9 +4,14 @@ import EditModal from './EditModal'
 
 function TaskDisplay({ tasks, dispatch }) {
     const [isModal, setISModal] = useState(false)
+    const [editTask, setEditTask] = useState({})
 
-    const editHandeler = () => {
+    const editHandeler = (task, index) => {
         setISModal(true)
+        setEditTask({ task, index })
+    }
+    const closeModal = () => {
+        setISModal(false)
     }
     return (
         <>
@@ -20,7 +25,7 @@ function TaskDisplay({ tasks, dispatch }) {
                                     <button
                                         onClick={() => dispatch({ type: "delete", payload: i })}
                                     >DEL</button>
-                                    <button onClick={editHandeler}>EDIT</button>
+                                    <button onClick={() => editHandeler(e, i)}>EDIT</button>
                                 </div>
                             </div>
                         )
@@ -28,7 +33,7 @@ function TaskDisplay({ tasks, dispatch }) {
                 }
             </div>
             <div>
-                {isModal && <EditModal></EditModal>}
+                {isModal && <EditModal closeModal={closeModal} editTask={editTask} dispatch={dispatch} />}
             </div>
         </>
     )
