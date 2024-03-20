@@ -13,11 +13,12 @@ function EditModal({ closeModal, editTask, dispatch }) {
     }
     return (
         <>
-            {console.log(upadteTask)}
+            {/* {console.log(upadteTask)} */}
             <div className="modal-container">
                 <div className="modal">
                     <h2>EDIT YOUR TASK</h2>
-                    <textarea cols="30" rows="4" value={upadteTask}
+                    <textarea cols="30" rows="4"
+                        value={upadteTask}
                         onChange={(e) => setUpadteTask(e.target.value)}></textarea>
                     <div className='modal-buttons'>
                         <button

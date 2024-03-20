@@ -17,15 +17,15 @@ function TaskDisplay({ tasks, dispatch }) {
         <>
             <div className="container">
                 {
-                    tasks.map((e, i) => {
+                    tasks.map((task, index) => {
                         return (
                             <div className="card">
-                                <h3>{e}</h3>
+                                <h3>{task}</h3>
                                 <div className='buttons'>
                                     <button
-                                        onClick={() => dispatch({ type: "delete", payload: i })}
+                                        onClick={() => dispatch({ type: "delete", payload: index })}
                                     >DEL</button>
-                                    <button onClick={() => editHandeler(e, i)}>EDIT</button>
+                                    <button onClick={() => editHandeler(task, index)}>EDIT</button>
                                 </div>
                             </div>
                         )
