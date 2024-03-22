@@ -181,6 +181,7 @@ h3{
     }
     .input>button{
         padding: 0;
+        font-size: 16px;
     }
     .input>input{
         height: 50px;
